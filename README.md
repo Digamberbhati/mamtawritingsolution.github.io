@@ -1,1 +1,0 @@
-# mamtawritingsolution.github.io
