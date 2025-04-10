@@ -2,41 +2,144 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/boxicons.min.css">
-    <link rel="icon" type="image/x-icon" href="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\logo1.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/6f4bbe428c.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Mamta Writing solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service {
+            padding: 30px 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .service:hover {
+            transform: translateY(-10px);
+        }
+        
+        .iconbox {
+            height: 60px;
+            width: 60px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 24px;
+            color: #dc3545;
+        }
+        
+        .col-img {
+            background: url('https://img.freepik.com/free-photo/education-collage-concept_23-2149597037.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+        
+        .project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project:hover img {
+            transform: scale(1.1);
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .project:hover .overlay {
+            opacity: 1;
+        }
+        
+        footer {
+            background: #343a40;
+            color: #fff;
+        }
+        
+        .footer-top {
+            padding: 60px 0 30px;
+        }
+        
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icons a {
+            color: #fff;
+            margin-left: 15px;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 100px 0;
+            }
+            .col-img {
+                min-height: 300px;
+            }
+            .service {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="30">
-
     <ul class="nav justify-content-end bg-white" style="font-size: small;">
-        <!-- <li class="nav-item">
-            <a class="nav-link active text-danger" aria-current="page"><i class="fa-solid fa-phone">10000000000</i></a>
-        </li> -->
         <li class="nav-item">
-            <a class="nav-link text-danger" href="#"><i class="fa-solid fa-phone">9650521917</i></a>
+            <a class="nav-link text-danger" href="#"><i class="fa-solid fa-phone"></i> 9650521917</a>
         </li>
         <li class="nav-item">
-<!--             <a class="nav-link text-danger" href="#"><i class="fa-solid fa-phone"></i></a> -->
-        </li>
-        <li class="nav-item">
-            <a class="nav-link  text-danger" href="#" aria-disabled="true"><i class="fa-solid fa-envelope"></i></a>
+            <a class="nav-link text-danger" href="#"><i class="fa-solid fa-envelope"></i> assignmentmamta@gmail.com</a>
         </li>
     </ul>
-    <!-- NAVBAR -->
+
     <nav class="navbar navbar-expand-lg py-1 sticky-top navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="logo" src="img/logo1.jpeg" alt="">
+                <img class="logo" src="img/logo1.jpeg" alt="Mamta Writing Solutions">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,8 +155,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
-
-
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -61,198 +162,152 @@
             </div>
         </div>
     </nav>
-    <!-- //NAVBAR -->
 
-    <!-- navbar hover -->
-<!--     <div id="mySidenav" class="sidenav">
-        <a href="https://wa.me/message/4D46SBNJLPF7I1" target="_blank" class="whatapp"><i class="fa fa-whatsapp"></i></a>
-        <a href="" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="" target="_blank" class="linkedin"> <i class="fa fa-linkedin-square"></i></a>
-        <a href="" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
-    </div> -->
-
-
-    <!-- HERO -->
     <div class="hero vh-100 d-flex align-items-center" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 mx-auto text-center">
-                    <h1 class="display-4 text-white">Welcome To Mamta Writting Solution</h1>
-                    <p class="text-white my-3">
-                        <!-- <p id="head"><b> </b>started this organisation in 2014. when he saw his friends strugling in assignments especially overseas friends to complete there assignments.</p> -->
-                        <!-- <a href="#" class="btn me-2 btn-primary"></a>
-<!--                         <a href="#" class="btn btn-outline-light">My Portfolio</a> --> -->
+                    <h1 class="display-4 text-white animate__animated animate__fadeIn">Welcome To Mamta Writing Solution</h1>
+                    <p class="text-white my-3">Your trusted partner for academic and professional writing services</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- //HERO -->
 
-    <!-- SERVICES -->
-    <section id="services">
+    <section id="services" class="py-5">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center">
-                    <h6 class="text-primary">SERIVCES</h6>
+                    <h6 class="text-danger">SERVICES</h6>
                     <h1>Our Services</h1>
                     <p>We Provide Many Types of Services Some of them are Below You can Hire us for any of them</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect bounceInUp" id="s1">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class='bx bxs-heart'></i>
+                            <i class='fas fa-heart'></i>
                         </div>
                         <h5 class="mt-4 mb-2">Health-Care</h5>
-                        <p>Medical Assignments are so tough assignment writing subject to do therefore it has been decided to hire best quality medical asignment writers from numerous background such as Nursing, MBBS, etc.</p>
+                        <p>Medical Assignments are so tough assignment writing subject to do therefore it has been decided to hire best quality medical assignment writers from numerous background such as Nursing, MBBS, etc.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect" id="s2">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class="fa-solid fa-microscope"></i>
+                            <i class="fas fa-microscope"></i>
                         </div>
                         <h5 class="mt-4 mb-2">Science</h5>
                         <p>This subject seems to be very complex, but our teachers are dedicated to deliver on time solutions for this field because we have one of the top assignment writing experts for this subject.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect" id="s3">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class="fa-solid fa-coins"></i>
+                            <i class="fas fa-coins"></i>
                         </div>
                         <h5 class="mt-4 mb-2">Finance</h5>
                         <p>We got the best assignment writing experts of Finance And Accounting subjects, in these areas our writers are capable to solve all the issues</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect" id="s4">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class="fa-solid fa-house-chimney"></i>
+                            <i class="fas fa-home"></i>
                         </div>
-                        <h5 class="mt-4 mb-2">Engerrining</h5>
-                        <p>We got engineering assignment eriting professors of different fields like Mechanical Engineering, Civil Engineering, Electric Engineering, etc.</p>
+                        <h5 class="mt-4 mb-2">Engineering</h5>
+                        <p>We got engineering assignment writing professors of different fields like Mechanical Engineering, Civil Engineering, Electric Engineering, etc.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect" id="s5">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class="fa-solid fa-calculator"></i> </div>
+                            <i class="fas fa-calculator"></i>
+                        </div>
                         <h5 class="mt-4 mb-2">Maths</h5>
-                        <p>Mamta Writing Solution helps in every Science and Maths asignments including Physics, Chemistry, Biology And all level Maths work. We have best assignment writing experts for this.</p>
+                        <p>Mamta Writing Solution helps in every Science and Maths assignments including Physics, Chemistry, Biology And all level Maths work. We have best assignment writing experts for this.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect" id="s6">
+                    <div class="service">
                         <div class="iconbox">
-                            <i class="fa-solid fa-scale-balanced"></i> </div>
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
                         <h5 class="mt-4 mb-2">Law and Management</h5>
                         <p>We got the best assignment writing experts of Finance And Accounting subjects, in these areas our writers are capable to solve all the issues</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-7">
-                    <div class="service card-effect" id="s7">
-                        <div class="iconbox">
-                            <i class="fa-solid fa-user"></i> </div>
-                        <h5 class="mt-4 mb-2">Part-time-job</h5>
-                        <p>We help our students in finding Part-Time Jobs by posting their exact locations and availability on different social platforms.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-8">
-                    <div class="service card-effect" id="s8">
-                        <div class="iconbox">
-                            <i class="fa-solid fa-computer"></i> </div>
-                        <h5 class="mt-4 mb-2">Information Technology Assignments</h5>
-                        <p>It is vast assignments writing subject which involves </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-9">
-                    <div class="service card-effect" id="s9">
-                        <div class="iconbox">
-                            <i class="fa-solid fa-building-columns"></i></i>
-                        </div>
-                        <h5 class="mt-4 mb-2">Bank and Account</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eius excepturi incidunt iusto provident deserunt, asperiores earum sunt qui suscipit! </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- SERVICES -->
 
-    <!-- FEATURES -->
     <section class="row w-100 py-0 bg-light" id="features">
         <div class="col-lg-6 col-img"></div>
         <div class="col-lg-6 py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <h6 class="text-primary">WHY TO CHOOES US</h6>
-                        <h1>Best solution for your Assigments</h1>
-                        <p>When you choose us, you'll feel the benefit of 10 years' experience of Assigment Writting. Because we know the digital world and we know that how to handle it.We love to Hear From You</p>
+                        <h6 class="text-danger">WHY TO CHOOSE US</h6>
+                        <h1>Best solution for your Assignments</h1>
+                        <p>When you choose us, you'll feel the benefit of 10 years' experience of Assignment Writing. Because we know the digital world and we know that how to handle it. We love to Hear From You</p>
 
                         <div class="feature d-flex mt-5">
                             <div class="iconbox me-3">
-                                <i class="fa-solid fa-gem"></i>
+                                <i class="fas fa-gem"></i>
                             </div>
                             <div>
                                 <h5>Writer's Background</h5>
                                 <p>We hire writer's from many nations of the world which lead to smooth understanding of all the concepts of different assignments given by the client</p>
                             </div>
                         </div>
-                        <div class="feature d-flex">
+                        <div class="feature d-flex mt-4">
                             <div class="iconbox me-3">
-                                <i class="fa-solid fa-user-group"></i></i>
+                                <i class="fas fa-users"></i>
                             </div>
                             <div>
-                                <h5>Better Communication
-                                </h5>
-                                <p>We never allow any student to wait for long...quicker response is being delivered to solve all issues of the client <br> Other</p>
+                                <h5>Better Communication</h5>
+                                <p>We never allow any student to wait for long...quicker response is being delivered to solve all issues of the client</p>
                             </div>
                         </div>
-                        <div class="feature d-flex">
+                        <div class="feature d-flex mt-4">
                             <div class="iconbox me-3">
-                                <i class="fa-brands fa-wpforms"></i>
+                                <i class="fas fa-user-graduate"></i>
                             </div>
                             <div>
                                 <h5>Best Academic Writers</h5>
                                 <p>Our organization hire the best experts from different parts of the world.. especially those who have done their education from overseas..So that they understand international students very well</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- FEATURES -->
 
-    <!-- PROJECTS -->
-    <section id="portfolio">
-        <div class="container-fluid">
+    <section id="portfolio" class="py-5">
+        <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center">
-                    <h6 class="text-primary">PROJECTS</h6>
+                    <h6 class="text-danger">PROJECTS</h6>
                     <h1>Our Recent Work</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+                    <p>Some of our successful projects and collaborations</p>
                 </div>
             </div>
             <div class="row g-3">
                 <div class="col-lg-4 col-sm-6">
                     <div class="project">
-                        <img src="https://img.freepik.com/free-photo/people-brainstorming-work-meeting_23-2148985491.jpg?t=st=1652351142~exp=1652351742~hmac=7b794d5081f7f19ccc87f4ebcdd630174ea303a4d2dc00b19e12415a9342a116&w=740" alt="">
+                        <img src="https://img.freepik.com/free-photo/people-brainstorming-work-meeting_23-2148985491.jpg" alt="Job Services">
                         <div class="overlay">
                             <div>
                                 <h4 class="text-white">Job</h4>
-
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="project">
-                        <img src="https://img.freepik.com/free-photo/paper-analysis_1098-15678.jpg?t=st=1652348418~exp=1652349018~hmac=7d269f7a30d192c8721b8a1ac23cfdb62b97fb995b0e294ee09347d5a1e4dafe&w=740" alt="">
+                        <img src="https://img.freepik.com/free-photo/paper-analysis_1098-15678.jpg" alt="Finance Services">
                         <div class="overlay">
                             <div>
                                 <h4 class="text-white">Finance</h4>
@@ -262,7 +317,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="project">
-                        <img src="https://img.freepik.com/free-photo/happy-doctor-holding-clipboard-with-patients_1098-2176.jpg?t=st=1652351076~exp=1652351676~hmac=d802915cf5bb1737fd96b98ca482db7dc71fca28af32091d06339ca63bc0fbee&w=740" alt="">
+                        <img src="https://img.freepik.com/free-photo/happy-doctor-holding-clipboard-with-patients_1098-2176.jpg" alt="Health Management">
                         <div class="overlay">
                             <div>
                                 <h4 class="text-white">Health Management</h4>
@@ -271,224 +326,38 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 mb-5">
-                <div class="col-md-8 mx-auto text-center">
-                    <h1>Deal with us</h1>
-                    <p>You can also deal with us in these Projects</p>
-                </div>
-            </div>
-            <div class="row g-2">
-                <div class="col-lg-6 col-sm-6">
-                    <div class="project">
-                        <img src="https://img.freepik.com/free-photo/one-hiking-lifestyle-summer-yoga_1150-1002.jpg?t=st=1652613115~exp=1652613715~hmac=ec7c59c2784527550c0b1dfb1319af727905e0064be88e0ab61948cd0ea2e776&w=740" alt="">
-                        <div class="overlay">
-                            <div>
-                                <h4 class="text-white">Yoga</h4>
-                                <h6 class="text-white">Demo Classes and Paid Classes also Availabile</h6>
-                                <a href="https://en.wikipedia.org/wiki/Yoga" class="text-danger">Click Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="project">
-                        <img src="https://img.freepik.com/free-photo/mysterious-nature-african-american-young-basketball-player-red-team-action-neon-lights-dark-studio-background-concept-sport-movement-energy-dynamic-healthy-lifestyle_155003-34477.jpg?t=st=1652613240~exp=1652613840~hmac=83238d6a6c9e036e74ad926c73456841ae7ca6da65fa0ce13aa6a67557231253&w=740"
-                            alt="">
-                        <div class="overlay">
-                            <div>
-                                <h4 class="text-white">Sports</h4>
-                                <a href="https://en.wikipedia.org/wiki/Sport" class="text-danger">Click Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
-    <!-- PROJECTS -->
-
-    <!-- instagram -->
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <div class="flex w-full mb-20 flex-wrap">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Feedback</h1>
-                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Instagram &whatapps</p>
-            </div>
-            <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\W Image 2022-08-12 at 3.31.09 PM.jpeg">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\WhatsApp Image 2022-08-12 at 3.31.10 PM (1).jpeg">
-                    </div>
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\WhatsApp Image 2022-08-12 at 3.31.10 PM.jpeg">
-                    </div>
-                </div>
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\WhatsApp Image 2022-08-12 at 3.31.11 PM.jpeg">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\WhatsApp Image 2022-08-12 at 3.31.12 PM.jpeg">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="D:\projects\New folder (2)\MamtaWritting-SOlutions12\img\WhatsApp Image 2022-08-12 at 3.31.14 PM (1).jpeg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <section id="pricing" class="bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-8 mx-auto text-center">
-                    <h6 class="text-primary">Instagram Feedback</h6>
-
-                    <p></p>
-                </div>
-            </div>
-
-
-             <div class="row g-3"> 
-                <div class="col-lg-4 col-sm-6">
-                    <div class="project">
-                        <img src="https://img.freepik.com/free-photo/people-brainstorming-work-meeting_23-2148985491.jpg?t=st=1652351142~exp=1652351742~hmac=7b794d5081f7f19ccc87f4ebcdd630174ea303a4d2dc00b19e12415a9342a116&w=740" alt="">
-                        <div class="overlay">
-                            <div>
-                                <h4 class="text-white">Job</h4>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="project">
-                        <img src="https://img.freepik.com/free-photo/paper-analysis_1098-15678.jpg?t=st=1652348418~exp=1652349018~hmac=7d269f7a30d192c8721b8a1ac23cfdb62b97fb995b0e294ee09347d5a1e4dafe&w=740" alt="">
-                        <div class="overlay">
-                            <div>
-                                <h4 class="text-white">Finance</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="project">
-                        <img src="https://img.freepik.com/free-photo/happy-doctor-holding-clipboard-with-patients_1098-2176.jpg?t=st=1652351076~exp=1652351676~hmac=d802915cf5bb1737fd96b98ca482db7dc71fca28af32091d06339ca63bc0fbee&w=740" alt="">
-                        <div class="overlay">
-                            <div>
-                                <h4 class="text-white">Health Management</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-3">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="project">
-                            <img src="https://img.freepik.com/free-photo/influencer-couple-posting-social-media_23-2149194127.jpg?t=st=1652614132~exp=1652614732~hmac=32e4ab1be28df7967b308f6e6b2160a7d0f9846b18438d50fe2f835010cfa8b3&w=740" alt="">
-                            <div class="overlay">
-                                <div>
-                                    <h4 class="text-white">Job</h4>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="project">
-                            <img src="https://img.freepik.com/free-photo/social-media-background-instagram_135149-68.jpg?t=st=1652614132~exp=1652614732~hmac=f10a90ab7e76c778d574ae15c288b09f1fcb004ef9efbcbb5b76951fba5b96e4&w=740" alt="">
-                            <div class="overlay">
-                                <div>
-                                    <h4 class="text-white">Finance</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="project">
-                            <img src="https://img.freepik.com/free-photo/influencer-posting-social-media_23-2149194122.jpg?t=st=1652614132~exp=1652614732~hmac=fe140e3f60cc3941292fa6e939cbed9b3a0b7edf417da990c0e99d6b5b365870&w=740" alt="">
-                            <div class="overlay">
-                                <div>
-                                    <h4 class="text-white">Health Management</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    
- -->
-
-
-    <!-- CONTACT -->
-<!--     <section id="contact">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-8 mx-auto text-center">
-                    <h6 class="text-primary">CONTACT</h6>
-                    <h1>Get In Touch</h1>
-                    <p>If you have any Problem You can Contact With us Without any Hesitation</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-img1"></div>
-
-            <form action="" class="row g-3 justify-content-end">
-                <div class="col-md-5">
-                    <input type="text" class="form-control" placeholder="Full Name">
-                </div>
-                <div class="col-md-5">
-                    <input type="text" class="form-control" placeholder="Enter E-mail">
-                </div>
-                <div class="col-md-10">
-                    <input type="text" class="form-control" placeholder="Enter Subject">
-                </div>
-                <div class="col-md-10">
-                    <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Enter Message"></textarea>
-                </div>
-                <div class="col-md-10 d-grid">
-                    <button class="btn btn-primary">Contact</button>
-                </div>
-            </form>
-
-        </div>
-
-    </section> -->
-    <!-- CONTACT -->
 
     <footer>
         <div class="footer-top">
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-4">
-                        <p class="logo" style="color:rgb(214, 28, 28) ;">Mamta Writting Solutions</p>
+                        <p class="logo" style="color:#dc3545;font-size:24px;font-weight:bold;">Mamta Writing Solutions</p>
+                        <p>Your trusted academic partner since 2014</p>
                     </div>
                     <div class="col-lg-2">
-                        <h5 class="text-white">Usefull link</h5>
+                        <h5 class="text-white">Useful links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#">Home Page</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Courses</a></li>
+                            <li><a href="#home" class="text-white-50">Home Page</a></li>
+                            <li><a href="#services" class="text-white-50">Services</a></li>
+                            <li><a href="#features" class="text-white-50">Features</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2">
-                        <h5 class="text-white">More</h5>
+                        <h5 class="text-white">Legal</h5>
                         <ul class="list-unstyled">
-
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Disclaimer</a></li>
-                            <li><a href="#"> Terms & Conditions</a></li>
+                            <li><a href="#" class="text-white-50">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white-50">Disclaimer</a></li>
+                            <li><a href="#" class="text-white-50">Terms & Conditions</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4">
                         <h5 class="text-white">Contact</h5>
-                        <ul class="list-unstyled">
-                            <li></li>
-                            <li>Email: assignmentmamta@gmail.com</li>
-                            <li>Phone: 9650521917</li>
+                        <ul class="list-unstyled text-white-50">
+                            <li><i class="fas fa-envelope me-2"></i> assignmentmamta@gmail.com</li>
+                            <li><i class="fas fa-phone me-2"></i> 9650521917</li>
                         </ul>
                     </div>
                 </div>
@@ -498,14 +367,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="mb-0">© 2022 copyright all right reserved | Designed with by<a href="www.greatertechhub.com" class="text-white">GreaterTechuHub</a></p>
+                        <p class="mb-0 text-white-50">© 2023 copyright all right reserved</p>
                     </div>
                     <div class="col-md-6">
-                        <div class="social-icons">
-                            <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-twitter'></i></a>
-                            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                            <a href="#"><i class='bx bxl-whatsapp'></i></a> <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <div class="social-icons text-end">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -513,9 +383,7 @@
         </div>
     </footer>
 
-
-
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
